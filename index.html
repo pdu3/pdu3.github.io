@@ -1,113 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pei Du | Software Engineer</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pei Du - AI Engineer Portfolio</title>
+<style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f0f2f5;
-      color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
+    header {
+        text-align: center;
+        padding: 40px 20px 20px;
+    }
+    header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    header h1 {
+        margin: 15px 0 5px;
+        font-size: 26px;
+    }
+    header p {
+        margin: 5px 0 15px;
+        font-size: 16px;
+        color: #666;
+    }
+    header a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
     }
     .container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
     }
-    h1, h2 {
-      text-align: center;
-      color: #2c3e50;
+    .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .avatar {
-      display: block;
-      margin: 0 auto 20px;
-      width: 120px;
-      border-radius: 50%;
-      border: 3px solid #3498db;
+    .card h2 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #222;
     }
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
+    .card p {
+        font-size: 15px;
+        color: #444;
     }
-    .links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #3498db;
+    .card a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007BFF;
+        font-weight: bold;
+        text-decoration: none;
     }
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    .card a:hover {
+        text-decoration: underline;
     }
-    .project {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      transition: box-shadow 0.3s;
-    }
-    .project:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .project-title {
-      font-weight: bold;
-      color: #2d3436;
-    }
-    .project-desc {
-      font-size: 14px;
-      margin: 10px 0;
-    }
-    .project-link {
-      color: #0984e3;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    @media (max-width: 700px) {
-      .projects {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
-  <div class="container">
-    <img src="avatar.jpg" alt="My Avatar" class="avatar" />
+
+<header>
+    <img src="avatar.jpg" alt="Pei Du"> <!-- 替换为你的照片路径 -->
     <h1>Pei Du</h1>
-    <div class="intro">
-      <p>AI Engineer | AI & Vision | VQA Research</p>
-      <div class="links">
-        <a href="https://github.com/pdu3">GitHub</a>
-        <a href="pdu@pdx.edu">Email</a>
-        <a href="https://www.linkedin.com/in/your-linkedin">LinkedIn</a>
-      </div>
+    <p>AI Engineer | AI & Vision | VQA Research</p>
+    <a href="https://github.com/pdu3">GitHub</a>
+    <a href="pdu@pdx.edu">Email</a>
+    <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>PathRecall: Memory-Augmented Visual Question Answering for Indoor Navigation</h2>
+        <p>Designed and implemented a retrieval-augmented visual question answering (VQA) system to assist indoor navigation for visually impaired users. Integrated temporal memory using a custom MemoryNet to retrieve relevant frames from navigation history via BLIP-2 + MiniLM embeddings and a FAISS vector store. Enhanced VQA performance by combining retrieved frames with a question-aware captioning module, enabling context-aware answers across time. Achieved top-1 frame recall of XX% and outperformed BLIP-2 and MiniGPT-4 baselines on a custom indoor benchmark.</p>
+        <a href="https://github.com/YourRepo">View on GitHub ➜</a>
     </div>
 
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <div class="project-title">An automated AR-based annotation tool for indoor navigation for visually impaired people</div>
-        <div class="project-desc">
-          This project explores how Augmented Reality (AR) can enhance indoor navigation and object recognition for people with low vision. We developed a mobile application that automatically detects and labels salient objects (e.g., desks, chairs, low ceilings) using object detection, AR labeling, and precise indoor positioning. Unlike existing tools such as NearbyExplorer, which depend on large teams for manual annotation, our system enables a single volunteer to populate a shared database in real time. Low vision users can then receive instant audio descriptions of surrounding objects via their smartphones, reducing the effort required for orientation and improving independence in diverse indoor environments.
-        </div>
-        <a class="project-link" href="https://github.com/your-github-username/indoor-vqa">View on GitHub →</a>
-      </div>
-      <div class="project">
-        <div class="project-title">PathRecall: Memory-Augmented Visual Question Answering for Indoor Navigation
+    <div class="card">
+        <h2>AR-based Automated Annotation Tool for Indoor Navigation Assistance</h2>
+        <p>This project explores how Augmented Reality (AR) can enhance indoor navigation and object recognition for people with low vision. We developed a mobile application that automatically detects and labels salient objects (e.g., desks, chairs, low ceilings) using object detection, AR labeling, and precise indoor positioning. Unlike existing tools such as NearbyExplorer, which depend on large teams for manual annotation, our system enables a single volunteer to populate a shared database in real time. Low vision users can then receive instant audio descriptions of surrounding objects via their smartphones, reducing the effort required for orientation and improving independence in diverse indoor environments.</p>
+        <a href="https://github.com/YourRepo">View on GitHub ➜</a>
+    </div>
+
+    <div class="card">
+        <h2>Legal RAG Assistant – Retrieval-Augmented Legal QA System (Course Project)</h2>
+        <p>Built a domain-specific RAG pipeline for <b>U.S. legal documents</b>, fine-tuning Qwen2.5-Instruct with LoRA for improved legal text comprehension. Developed a <b>ChromaDB-based retrieval</b> layer integrated with multi-turn Q&A and compliance checks. Achieved <b>95% clause interpretation accuracy</b> and &lt;0.5s response time in prototype testing.</p>
+        <a href="https://github.com/YourRepo">View on GitHub ➜</a>
+    </div>
+
+    <div class="card">
+        <h2>Publications</h2>
+        <p>• <i>PathRecall: Memory-Augmented Visual Question Answering for Indoor Navigation</i>, ACM BuildSys 2025 (Under Review) [<a href="link-to-paper.pdf">PDF</a>] [<a href="https://github.com/YourRepo">GitHub</a>]</p>
+        <p>• <i>An AR-based Automated Annotation Tool for Indoor Navigation Assistance</i>, ASSETS 2025 Doctoral Consortium [<a href="link-to-paper.pdf">PDF</a>]</p>
+    </div>
+
 </div>
-        <div class="project-desc">Designed and implemented a retrieval-augmented visual question answering (VQA) system to assist indoor navigation for visually impaired users. Integrated temporal memory using a custom MemoryNet to retrieve relevant frames from navigation history via BLIP-2 + MiniLM embeddings and a FAISS vector store. Enhanced VQA performance by combining retrieved frames with a question-aware captioning module, enabling context-aware answers across time. Achieved top-1 frame recall of XX% and outperformed BLIP-2 and MiniGPT-4 baselines on a custom indoor benchmark.
 
-
-        </div>
-        <a class="project-link" href="https://github.com/your-github-username/trading-dashboard">View on GitHub →</a>
-      </div>
-      <!-- 更多项目 -->
-    </div>
-  </div>
 </body>
 </html>
